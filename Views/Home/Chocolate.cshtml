@@ -1,0 +1,43 @@
+﻿<!-- chocolate section -->
+@model List<database.Models.Chocolate>
+<div class="main_body_content">
+    <div class="hero_area">
+        <section class="chocolate_section layout_padding">
+            <div class="container">
+                <div class="heading_container">
+                    <h2>
+                        محصولات شکلاتی ما
+                    </h2>
+                    <p>
+                        محصولات شکلاتی ما با استفاده از مرغوب‌ترین مواد اولیه و دست‌ساز تهیه شده‌اند تا طعمی بی‌نظیر و لذت‌بخش را به شما هدیه دهند.
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+
+                <div class="chocolate_container">
+                    @for (int i = 0; i < 6; i++)
+                    {
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="~/lib/images/@Model[i].Chocoimg" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h6>
+                                    @Model[i].Chocoh1 <span>@Model[i].Chocoh2</span>
+                                </h6>
+                                <h5>
+                                    @Model[i].Chocoh3
+                                </h5>
+                                <a href="">
+                                    @Model[i].Chocoh4
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- end chocolate section -->

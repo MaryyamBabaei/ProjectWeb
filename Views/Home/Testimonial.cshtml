@@ -1,0 +1,56 @@
+﻿@model List<Class>
+<!-- client section -->
+        <section class="client_section layout_padding">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 ml-auto">
+                        <div class="img-box sub_img-box">
+                            <img src="~/lib/images/client-chocolate.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 px-0">
+                        <div class="client_container">
+                            <div class="heading_container">
+                                <h2>
+                                    رضایت مشتریان
+                                </h2>
+                            </div>
+                            <div id="customCarousel2" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    @foreach (var item in Model)
+                            { 
+                                    <div class="box">
+                                        <div class="img-box">
+                                            <img src="@Url.Content(item.Picture)" alt="">
+                                        </div>
+                                        <div class="detail-box">
+                                            <h4>
+                                                @item.Name
+                                            </h4>
+                                            <p>
+                                                @item.Idea
+                                            </p>
+                                            <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    }
+                                </div>
+                             </div>
+                                <div class="carousel_btn-box">
+                                    <a class="carousel-control-prev" href="#customCarousel2" role="button" data-slide="prev">
+                                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                        <span class="sr-only">قبلی</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#customCarousel2" role="button" data-slide="next">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        <span class="sr-only">بعدی</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- end client section -->
